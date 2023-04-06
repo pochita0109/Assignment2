@@ -10,20 +10,28 @@ decrypted_message = ""
 
 #Substitute the characters by replacing it to corresponding vowels
 
+for i in range(len(encrypted_message)):
 # If the character is *, change to a
-decrypted_message = encrypted_message.replace("*","a")
+     if encrypted_message[i] == "*":
+        decrypted_message += "a"
 
 # If the character is &, change to e
-decrypted_message = encrypted_message.replace("&","e")
+     elif encrypted_message[i] == "&":
+        decrypted_message += "e"
 
 # If the character is #, change to i
-decrypted_message = encrypted_message.replace("#","i")
+     elif encrypted_message[i] == "#":
+        decrypted_message += "i"
 
 # If the character is +, change to o
-decrypted_message = encrypted_message.replace("+","o")
+     elif encrypted_message[i] == "+":
+        decrypted_message += "o"
 
 # If the character is !, change to u
-decrypted_message = encrypted_message.replace("!","u")
+     elif encrypted_message[i] == "!":
+        decrypted_message += "u"
+     else:
+        decrypted_message += encrypted_message[i]
 
 # Print the decrypted message
 print("\033[93mThe decrypted message is:", decrypted_message)
